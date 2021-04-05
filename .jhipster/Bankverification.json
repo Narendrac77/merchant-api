@@ -1,0 +1,21 @@
+{
+  "name": "Bankverification",
+  "fields": [
+    {
+      "fieldName": "bankverificationId",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210405052609",
+  "entityTableName": "bankverification",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

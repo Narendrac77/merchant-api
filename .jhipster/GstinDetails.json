@@ -1,0 +1,41 @@
+{
+  "name": "GstinDetails",
+  "fields": [
+    {
+      "fieldName": "gstin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "consent",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "buisnessInfo",
+      "otherEntityRelationshipName": "gstinDetails",
+      "relationshipName": "buisnessInfo",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20210323081249",
+  "entityTableName": "gstin_details",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,26 @@
+{
+  "merchantEngineApp": {
+    "fileModel": {
+      "home": {
+        "title": "File Models",
+        "createLabel": "Create a new File Model",
+        "createOrEditLabel": "Create or edit a File Model",
+        "notFound": "No File Models found"
+      },
+      "created": "A new File Model is created with identifier {{ param }}",
+      "updated": "A File Model is updated with identifier {{ param }}",
+      "deleted": "A File Model is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete File Model {{ id }}?"
+      },
+      "detail": {
+        "title": "File Model"
+      },
+      "fileId": "File Id",
+      "fileName": "File Name",
+      "fileType": "File Type",
+      "imageData": "Image Data",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

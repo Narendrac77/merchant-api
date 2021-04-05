@@ -1,0 +1,42 @@
+{
+  "name": "FileModel",
+  "fields": [
+    {
+      "fieldName": "fileId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fileName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fileType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imageData",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "buisnessInfo",
+      "otherEntityRelationshipName": "fileModel",
+      "relationshipName": "buisnessInfo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210308080025",
+  "entityTableName": "file_model",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

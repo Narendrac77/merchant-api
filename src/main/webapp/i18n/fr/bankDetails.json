@@ -1,0 +1,27 @@
+{
+  "merchantEngineApp": {
+    "bankDetails": {
+      "home": {
+        "title": "BankDetails",
+        "createLabel": "Créer un nouveau Bank Details",
+        "createOrEditLabel": "Créer ou éditer un Bank Details",
+        "notFound": "Aucun Bank Details trouvé"
+      },
+      "created": "Un nouveau Bank Details a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Bank Details avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Bank Details avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Bank Details {{ id }} ?"
+      },
+      "detail": {
+        "title": "Bank Details"
+      },
+      "accountNumber": "Account Number",
+      "iFSCCode": "I FSC Code",
+      "name": "Name",
+      "mid": "Mid",
+      "status": "Status",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

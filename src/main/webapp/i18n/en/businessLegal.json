@@ -1,0 +1,27 @@
+{
+  "merchantEngineApp": {
+    "businessLegal": {
+      "home": {
+        "title": "Business Legals",
+        "createLabel": "Create a new Business Legal",
+        "createOrEditLabel": "Create or edit a Business Legal",
+        "notFound": "No Business Legals found"
+      },
+      "created": "A new Business Legal is created with identifier {{ param }}",
+      "updated": "A Business Legal is updated with identifier {{ param }}",
+      "deleted": "A Business Legal is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Business Legal {{ id }}?"
+      },
+      "detail": {
+        "title": "Business Legal"
+      },
+      "legalName": "Legal Name",
+      "regAddress": "Reg Address",
+      "incorporation": "Incorporation",
+      "panNumber": "Pan Number",
+      "gstInNumber": "Gst In Number",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

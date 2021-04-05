@@ -1,0 +1,25 @@
+{
+  "merchantEngineApp": {
+    "businessBankAcc": {
+      "home": {
+        "title": "Business Bank Accs",
+        "createLabel": "Create a new Business Bank Acc",
+        "createOrEditLabel": "Create or edit a Business Bank Acc",
+        "notFound": "No Business Bank Accs found"
+      },
+      "created": "A new Business Bank Acc is created with identifier {{ param }}",
+      "updated": "A Business Bank Acc is updated with identifier {{ param }}",
+      "deleted": "A Business Bank Acc is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Business Bank Acc {{ id }}?"
+      },
+      "detail": {
+        "title": "Business Bank Acc"
+      },
+      "accountNumber": "Account Number",
+      "ifscCode": "Ifsc Code",
+      "accountName": "Account Name",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

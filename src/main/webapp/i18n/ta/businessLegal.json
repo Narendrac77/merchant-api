@@ -1,0 +1,27 @@
+{
+  "merchantEngineApp": {
+    "businessLegal": {
+      "home": {
+        "title": "Business Legals",
+        "createLabel": "Business Legal-ஐ உருவாக்கு",
+        "createOrEditLabel": "Business Legal -ஐ மாற்று (அ) உருவாக்கு",
+        "notFound": "No Business Legals found"
+      },
+      "created": "Business Legal புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+      "updated": "Business Legal மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+      "deleted": "A Business Legal நீக்கப்பட்டது, அடையாளம {{ param }}",
+      "delete": {
+        "question": "நீக்குவதற்கு உறுதி செய் Business Legal {{ id }}?"
+      },
+      "detail": {
+        "title": "Business Legal"
+      },
+      "legalName": "Legal Name",
+      "regAddress": "Reg Address",
+      "incorporation": "Incorporation",
+      "panNumber": "Pan Number",
+      "gstInNumber": "Gst In Number",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

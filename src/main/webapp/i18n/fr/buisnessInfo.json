@@ -1,0 +1,42 @@
+{
+  "merchantEngineApp": {
+    "buisnessInfo": {
+      "home": {
+        "title": "BuisnessInfos",
+        "createLabel": "Créer un nouveau Buisness Info",
+        "createOrEditLabel": "Créer ou éditer un Buisness Info",
+        "notFound": "Aucun Buisness Info trouvé"
+      },
+      "created": "Un nouveau Buisness Info a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Buisness Info avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Buisness Info avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Buisness Info {{ id }} ?"
+      },
+      "detail": {
+        "title": "Buisness Info"
+      },
+      "displayName": "Display Name",
+      "businessType": "Business Type",
+      "businessCategory": "Business Category",
+      "businessSubCategory": "Business Sub Category",
+      "country": "Country",
+      "pincode": "Pincode",
+      "addline1": "Addline 1",
+      "addline2": "Addline 2",
+      "contactName": "Contact Name",
+      "email": "Email",
+      "mobileNumber": "Mobile Number",
+      "websiteUrl": "Website Url",
+      "age": "Age",
+      "turnOver": "Turn Over",
+      "panDetails": "Pan Details",
+      "bankDetails": "Bank Details",
+      "gstinDetails": "Gstin Details",
+      "businessLegal": "Business Legal",
+      "businessLegalContact": "Business Legal Contact",
+      "businessBankAcc": "Business Bank Acc",
+      "fileModel": "File Model"
+    }
+  }
+}

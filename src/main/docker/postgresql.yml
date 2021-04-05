@@ -1,0 +1,12 @@
+version: '2'
+services:
+  merchantengine-postgresql:
+    image: postgres:12.3
+    # volumes:
+    #     - ~/volumes/jhipster/merchantEngine/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=merchantEngine
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432

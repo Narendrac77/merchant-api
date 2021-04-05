@@ -1,0 +1,117 @@
+
+entity BuisnessInfo {
+	displayName String,
+    businessType String,
+    businessCategory String,
+    businessSubCategory String,
+    country String,
+    pincode String,
+    addline1 String,
+    addline2 String,
+    contactName String,
+    email String,
+  	mobileNumber String,
+    websiteUrl String,
+    age String,
+    turnOver String
+
+}
+
+entity BusinessLegal {
+	legalName String,
+    regAddress String,
+    incorporation String,
+    panNumber String,
+    gstInNumber String
+}
+
+entity BusinessLegalContact {
+	contactName String,
+    contactMobile String,
+    contactEmail String,
+    aadharNumber String
+
+}
+
+
+entity BusinessBankAcc {
+	accountNumber String,
+	ifscCode String,
+    accountName String
+}
+
+entity FileModel {
+	fileId String,
+	fileName String,
+    fileType String,
+    imageData ImageBlob
+}
+
+entity PanDetails{
+   panNumber String,
+   consent String,
+   name String,
+   mid String,
+   status String
+}
+
+entity BankDetails{
+  accountNumber String,
+  IFSCCode  String,
+  name String,
+  mid String,
+  status String
+}
+
+entity GstinDetails{
+   gstin String,
+   consent String,
+   mid String,
+   status String
+}
+
+entity Verification{
+   mid String,
+   panStatus String,
+   bankStatus String,
+   gstinStatus String
+}
+entity Panverification{
+panverificationId Integer
+}
+entity Bankverification{
+bankverificationId Integer
+}
+
+entity Gstinverification{
+gstinverificationId Integer
+}
+
+relationship OneToOne{
+  BuisnessInfo{panDetails} to PanDetails{buisnessInfo}
+  BuisnessInfo{bankDetails} to BankDetails{buisnessInfo}
+  BuisnessInfo{gstinDetails} to GstinDetails{buisnessInfo}
+ }
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+enum Status{
+   APPROVED("approved"),
+   DECLINED("declined"),
+   PROCESSING("processing")
+}
+
+
+relationship OneToMany {
+  BuisnessInfo{businessLegal} to BusinessLegal{buisnessInfo}
+  BuisnessInfo{businessLegalContact} to BusinessLegalContact{buisnessInfo}
+  BuisnessInfo{businessBankAcc} to BusinessBankAcc{buisnessInfo}
+   BuisnessInfo{fileModel} to FileModel{buisnessInfo}
+
+}
+
+// Set pagination options
+paginate BuisnessInfo with infinite-scroll
+paginate BuisnessInfo with pagination

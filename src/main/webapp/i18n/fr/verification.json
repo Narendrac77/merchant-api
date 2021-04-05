@@ -1,0 +1,25 @@
+{
+  "merchantEngineApp": {
+    "verification": {
+      "home": {
+        "title": "Verifications",
+        "createLabel": "Créer un nouveau Verification",
+        "createOrEditLabel": "Créer ou éditer un Verification",
+        "notFound": "Aucun Verification trouvé"
+      },
+      "created": "Un nouveau Verification a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Verification avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Verification avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Verification {{ id }} ?"
+      },
+      "detail": {
+        "title": "Verification"
+      },
+      "mid": "Mid",
+      "panStatus": "Pan Status",
+      "bankStatus": "Bank Status",
+      "gstinStatus": "Gstin Status"
+    }
+  }
+}

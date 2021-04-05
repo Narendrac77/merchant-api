@@ -1,0 +1,26 @@
+{
+  "merchantEngineApp": {
+    "businessLegalContact": {
+      "home": {
+        "title": "BusinessLegalContacts",
+        "createLabel": "Créer un nouveau Business Legal Contact",
+        "createOrEditLabel": "Créer ou éditer un Business Legal Contact",
+        "notFound": "Aucun Business Legal Contact trouvé"
+      },
+      "created": "Un nouveau Business Legal Contact a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Business Legal Contact avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Business Legal Contact avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Business Legal Contact {{ id }} ?"
+      },
+      "detail": {
+        "title": "Business Legal Contact"
+      },
+      "contactName": "Contact Name",
+      "contactMobile": "Contact Mobile",
+      "contactEmail": "Contact Email",
+      "aadharNumber": "Aadhar Number",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "merchantEngineApp": {
+    "bankverification": {
+      "home": {
+        "title": "Bankverifications",
+        "createLabel": "Bankverification-ஐ உருவாக்கு",
+        "createOrEditLabel": "Bankverification -ஐ மாற்று (அ) உருவாக்கு",
+        "notFound": "No Bankverifications found"
+      },
+      "created": "Bankverification புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+      "updated": "Bankverification மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+      "deleted": "A Bankverification நீக்கப்பட்டது, அடையாளம {{ param }}",
+      "delete": {
+        "question": "நீக்குவதற்கு உறுதி செய் Bankverification {{ id }}?"
+      },
+      "detail": {
+        "title": "Bankverification"
+      },
+      "bankverificationId": "Bankverification Id"
+    }
+  }
+}

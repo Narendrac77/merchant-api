@@ -1,0 +1,22 @@
+{
+  "merchantEngineApp": {
+    "gstinverification": {
+      "home": {
+        "title": "Gstinverifications",
+        "createLabel": "Create a new Gstinverification",
+        "createOrEditLabel": "Create or edit a Gstinverification",
+        "notFound": "No Gstinverifications found"
+      },
+      "created": "A new Gstinverification is created with identifier {{ param }}",
+      "updated": "A Gstinverification is updated with identifier {{ param }}",
+      "deleted": "A Gstinverification is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Gstinverification {{ id }}?"
+      },
+      "detail": {
+        "title": "Gstinverification"
+      },
+      "gstinverificationId": "Gstinverification Id"
+    }
+  }
+}

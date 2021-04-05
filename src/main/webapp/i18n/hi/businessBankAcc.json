@@ -1,0 +1,25 @@
+{
+  "merchantEngineApp": {
+    "businessBankAcc": {
+      "home": {
+        "title": "BusinessBankAccs",
+        "createLabel": "नया Business Bank Acc बनाएँ",
+        "createOrEditLabel": "Business Bank Acc बनाएँ या संपादित करें",
+        "notFound": "No Business Bank Accs found"
+      },
+      "created": "एक नया Business Bank Acc [identifier: {{ param }}] तैयार है",
+      "updated": "एक Business Bank Acc [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Business Bank Acc [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Business Bank Acc [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Business Bank Acc"
+      },
+      "accountNumber": "Account Number",
+      "ifscCode": "Ifsc Code",
+      "accountName": "Account Name",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

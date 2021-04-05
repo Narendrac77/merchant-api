@@ -1,0 +1,26 @@
+{
+  "merchantEngineApp": {
+    "gstinDetails": {
+      "home": {
+        "title": "GstinDetails",
+        "createLabel": "नया Gstin Details बनाएँ",
+        "createOrEditLabel": "Gstin Details बनाएँ या संपादित करें",
+        "notFound": "No Gstin Details found"
+      },
+      "created": "एक नया Gstin Details [identifier: {{ param }}] तैयार है",
+      "updated": "एक Gstin Details [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Gstin Details [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Gstin Details [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Gstin Details"
+      },
+      "gstin": "Gstin",
+      "consent": "Consent",
+      "mid": "Mid",
+      "status": "Status",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

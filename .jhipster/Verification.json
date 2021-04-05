@@ -1,0 +1,33 @@
+{
+  "name": "Verification",
+  "fields": [
+    {
+      "fieldName": "mid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "panStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bankStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gstinStatus",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210329101430",
+  "entityTableName": "verification",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

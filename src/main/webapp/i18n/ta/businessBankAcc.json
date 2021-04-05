@@ -1,0 +1,25 @@
+{
+  "merchantEngineApp": {
+    "businessBankAcc": {
+      "home": {
+        "title": "Business Bank Accs",
+        "createLabel": "Business Bank Acc-ஐ உருவாக்கு",
+        "createOrEditLabel": "Business Bank Acc -ஐ மாற்று (அ) உருவாக்கு",
+        "notFound": "No Business Bank Accs found"
+      },
+      "created": "Business Bank Acc புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+      "updated": "Business Bank Acc மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+      "deleted": "A Business Bank Acc நீக்கப்பட்டது, அடையாளம {{ param }}",
+      "delete": {
+        "question": "நீக்குவதற்கு உறுதி செய் Business Bank Acc {{ id }}?"
+      },
+      "detail": {
+        "title": "Business Bank Acc"
+      },
+      "accountNumber": "Account Number",
+      "ifscCode": "Ifsc Code",
+      "accountName": "Account Name",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

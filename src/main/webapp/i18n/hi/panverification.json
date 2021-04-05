@@ -1,0 +1,22 @@
+{
+  "merchantEngineApp": {
+    "panverification": {
+      "home": {
+        "title": "Panverifications",
+        "createLabel": "नया Panverification बनाएँ",
+        "createOrEditLabel": "Panverification बनाएँ या संपादित करें",
+        "notFound": "No Panverifications found"
+      },
+      "created": "एक नया Panverification [identifier: {{ param }}] तैयार है",
+      "updated": "एक Panverification [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Panverification [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Panverification [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Panverification"
+      },
+      "panverificationId": "Panverification Id"
+    }
+  }
+}

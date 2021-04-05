@@ -1,0 +1,37 @@
+{
+  "name": "BusinessBankAcc",
+  "fields": [
+    {
+      "fieldName": "accountNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ifscCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountName",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "buisnessInfo",
+      "otherEntityRelationshipName": "businessBankAcc",
+      "relationshipName": "buisnessInfo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210302052923",
+  "entityTableName": "business_bank_acc",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

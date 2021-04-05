@@ -1,0 +1,25 @@
+{
+  "merchantEngineApp": {
+    "verification": {
+      "home": {
+        "title": "Verifications",
+        "createLabel": "नया Verification बनाएँ",
+        "createOrEditLabel": "Verification बनाएँ या संपादित करें",
+        "notFound": "No Verifications found"
+      },
+      "created": "एक नया Verification [identifier: {{ param }}] तैयार है",
+      "updated": "एक Verification [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Verification [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Verification [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Verification"
+      },
+      "mid": "Mid",
+      "panStatus": "Pan Status",
+      "bankStatus": "Bank Status",
+      "gstinStatus": "Gstin Status"
+    }
+  }
+}

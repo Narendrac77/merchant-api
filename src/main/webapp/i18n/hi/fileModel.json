@@ -1,0 +1,26 @@
+{
+  "merchantEngineApp": {
+    "fileModel": {
+      "home": {
+        "title": "FileModels",
+        "createLabel": "नया File Model बनाएँ",
+        "createOrEditLabel": "File Model बनाएँ या संपादित करें",
+        "notFound": "No File Models found"
+      },
+      "created": "एक नया File Model [identifier: {{ param }}] तैयार है",
+      "updated": "एक File Model [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "File Model [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "File Model [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "File Model"
+      },
+      "fileId": "File Id",
+      "fileName": "File Name",
+      "fileType": "File Type",
+      "imageData": "Image Data",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

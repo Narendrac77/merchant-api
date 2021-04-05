@@ -1,0 +1,21 @@
+{
+  "name": "Panverification",
+  "fields": [
+    {
+      "fieldName": "panverificationId",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210405052509",
+  "entityTableName": "panverification",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

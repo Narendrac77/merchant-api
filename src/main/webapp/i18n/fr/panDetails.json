@@ -1,0 +1,27 @@
+{
+  "merchantEngineApp": {
+    "panDetails": {
+      "home": {
+        "title": "PanDetails",
+        "createLabel": "Créer un nouveau Pan Details",
+        "createOrEditLabel": "Créer ou éditer un Pan Details",
+        "notFound": "Aucun Pan Details trouvé"
+      },
+      "created": "Un nouveau Pan Details a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Pan Details avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Pan Details avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Pan Details {{ id }} ?"
+      },
+      "detail": {
+        "title": "Pan Details"
+      },
+      "panNumber": "Pan Number",
+      "consent": "Consent",
+      "name": "Name",
+      "mid": "Mid",
+      "status": "Status",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

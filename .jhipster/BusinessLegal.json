@@ -1,0 +1,45 @@
+{
+  "name": "BusinessLegal",
+  "fields": [
+    {
+      "fieldName": "legalName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "regAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "incorporation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "panNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gstInNumber",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "buisnessInfo",
+      "otherEntityRelationshipName": "businessLegal",
+      "relationshipName": "buisnessInfo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210302052723",
+  "entityTableName": "business_legal",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

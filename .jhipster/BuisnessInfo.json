@@ -1,0 +1,122 @@
+{
+  "name": "BuisnessInfo",
+  "fields": [
+    {
+      "fieldName": "displayName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessCategory",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessSubCategory",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "country",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pincode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addline1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addline2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mobileNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "websiteUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "age",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "turnOver",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "panDetails",
+      "otherEntityRelationshipName": "buisnessInfo",
+      "relationshipName": "panDetails",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "bankDetails",
+      "otherEntityRelationshipName": "buisnessInfo",
+      "relationshipName": "bankDetails",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "gstinDetails",
+      "otherEntityRelationshipName": "buisnessInfo",
+      "relationshipName": "gstinDetails",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "businessLegal",
+      "otherEntityRelationshipName": "buisnessInfo",
+      "relationshipName": "businessLegal"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "businessLegalContact",
+      "otherEntityRelationshipName": "buisnessInfo",
+      "relationshipName": "businessLegalContact"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "businessBankAcc",
+      "otherEntityRelationshipName": "buisnessInfo",
+      "relationshipName": "businessBankAcc"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "fileModel",
+      "otherEntityRelationshipName": "buisnessInfo",
+      "relationshipName": "fileModel"
+    }
+  ],
+  "changelogDate": "20210302052623",
+  "entityTableName": "buisness_info",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,22 @@
+{
+  "merchantEngineApp": {
+    "panverification": {
+      "home": {
+        "title": "Panverifications",
+        "createLabel": "Create a new Panverification",
+        "createOrEditLabel": "Create or edit a Panverification",
+        "notFound": "No Panverifications found"
+      },
+      "created": "A new Panverification is created with identifier {{ param }}",
+      "updated": "A Panverification is updated with identifier {{ param }}",
+      "deleted": "A Panverification is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Panverification {{ id }}?"
+      },
+      "detail": {
+        "title": "Panverification"
+      },
+      "panverificationId": "Panverification Id"
+    }
+  }
+}

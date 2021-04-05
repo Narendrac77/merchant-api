@@ -1,0 +1,22 @@
+{
+  "merchantEngineApp": {
+    "bankverification": {
+      "home": {
+        "title": "Bankverifications",
+        "createLabel": "Create a new Bankverification",
+        "createOrEditLabel": "Create or edit a Bankverification",
+        "notFound": "No Bankverifications found"
+      },
+      "created": "A new Bankverification is created with identifier {{ param }}",
+      "updated": "A Bankverification is updated with identifier {{ param }}",
+      "deleted": "A Bankverification is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Bankverification {{ id }}?"
+      },
+      "detail": {
+        "title": "Bankverification"
+      },
+      "bankverificationId": "Bankverification Id"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "merchantEngineApp": {
+    "gstinDetails": {
+      "home": {
+        "title": "Gstin Details",
+        "createLabel": "Create a new Gstin Details",
+        "createOrEditLabel": "Create or edit a Gstin Details",
+        "notFound": "No Gstin Details found"
+      },
+      "created": "A new Gstin Details is created with identifier {{ param }}",
+      "updated": "A Gstin Details is updated with identifier {{ param }}",
+      "deleted": "A Gstin Details is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Gstin Details {{ id }}?"
+      },
+      "detail": {
+        "title": "Gstin Details"
+      },
+      "gstin": "Gstin",
+      "consent": "Consent",
+      "mid": "Mid",
+      "status": "Status",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

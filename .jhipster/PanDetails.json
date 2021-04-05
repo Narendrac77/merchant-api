@@ -1,0 +1,45 @@
+{
+  "name": "PanDetails",
+  "fields": [
+    {
+      "fieldName": "panNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "consent",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "buisnessInfo",
+      "otherEntityRelationshipName": "panDetails",
+      "relationshipName": "buisnessInfo",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20210323073356",
+  "entityTableName": "pan_details",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

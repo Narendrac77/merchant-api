@@ -1,0 +1,42 @@
+{
+  "merchantEngineApp": {
+    "buisnessInfo": {
+      "home": {
+        "title": "Buisness Infos",
+        "createLabel": "Buisness Info-ஐ உருவாக்கு",
+        "createOrEditLabel": "Buisness Info -ஐ மாற்று (அ) உருவாக்கு",
+        "notFound": "No Buisness Infos found"
+      },
+      "created": "Buisness Info புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+      "updated": "Buisness Info மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+      "deleted": "A Buisness Info நீக்கப்பட்டது, அடையாளம {{ param }}",
+      "delete": {
+        "question": "நீக்குவதற்கு உறுதி செய் Buisness Info {{ id }}?"
+      },
+      "detail": {
+        "title": "Buisness Info"
+      },
+      "displayName": "Display Name",
+      "businessType": "Business Type",
+      "businessCategory": "Business Category",
+      "businessSubCategory": "Business Sub Category",
+      "country": "Country",
+      "pincode": "Pincode",
+      "addline1": "Addline 1",
+      "addline2": "Addline 2",
+      "contactName": "Contact Name",
+      "email": "Email",
+      "mobileNumber": "Mobile Number",
+      "websiteUrl": "Website Url",
+      "age": "Age",
+      "turnOver": "Turn Over",
+      "panDetails": "Pan Details",
+      "bankDetails": "Bank Details",
+      "gstinDetails": "Gstin Details",
+      "businessLegal": "Business Legal",
+      "businessLegalContact": "Business Legal Contact",
+      "businessBankAcc": "Business Bank Acc",
+      "fileModel": "File Model"
+    }
+  }
+}

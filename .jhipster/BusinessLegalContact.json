@@ -1,0 +1,41 @@
+{
+  "name": "BusinessLegalContact",
+  "fields": [
+    {
+      "fieldName": "contactName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactMobile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "aadharNumber",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "buisnessInfo",
+      "otherEntityRelationshipName": "businessLegalContact",
+      "relationshipName": "buisnessInfo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210302052823",
+  "entityTableName": "business_legal_contact",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

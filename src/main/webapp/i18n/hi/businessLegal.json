@@ -1,0 +1,27 @@
+{
+  "merchantEngineApp": {
+    "businessLegal": {
+      "home": {
+        "title": "BusinessLegals",
+        "createLabel": "नया Business Legal बनाएँ",
+        "createOrEditLabel": "Business Legal बनाएँ या संपादित करें",
+        "notFound": "No Business Legals found"
+      },
+      "created": "एक नया Business Legal [identifier: {{ param }}] तैयार है",
+      "updated": "एक Business Legal [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Business Legal [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Business Legal [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Business Legal"
+      },
+      "legalName": "Legal Name",
+      "regAddress": "Reg Address",
+      "incorporation": "Incorporation",
+      "panNumber": "Pan Number",
+      "gstInNumber": "Gst In Number",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

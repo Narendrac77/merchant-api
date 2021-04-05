@@ -1,0 +1,27 @@
+{
+  "merchantEngineApp": {
+    "panDetails": {
+      "home": {
+        "title": "Pan Details",
+        "createLabel": "Create a new Pan Details",
+        "createOrEditLabel": "Create or edit a Pan Details",
+        "notFound": "No Pan Details found"
+      },
+      "created": "A new Pan Details is created with identifier {{ param }}",
+      "updated": "A Pan Details is updated with identifier {{ param }}",
+      "deleted": "A Pan Details is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Pan Details {{ id }}?"
+      },
+      "detail": {
+        "title": "Pan Details"
+      },
+      "panNumber": "Pan Number",
+      "consent": "Consent",
+      "name": "Name",
+      "mid": "Mid",
+      "status": "Status",
+      "buisnessInfo": "Buisness Info"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "merchantEngineApp": {
+    "gstinverification": {
+      "home": {
+        "title": "Gstinverifications",
+        "createLabel": "नया Gstinverification बनाएँ",
+        "createOrEditLabel": "Gstinverification बनाएँ या संपादित करें",
+        "notFound": "No Gstinverifications found"
+      },
+      "created": "एक नया Gstinverification [identifier: {{ param }}] तैयार है",
+      "updated": "एक Gstinverification [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Gstinverification [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Gstinverification [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Gstinverification"
+      },
+      "gstinverificationId": "Gstinverification Id"
+    }
+  }
+}
