@@ -133,14 +133,14 @@ public class GstinDetailsResource {
     /**
      * {@code GET  /gstin-details/:id} : get the "id" gstinDetails.
      *
-     * @param id the id of the gstinDetails to retrieve.
+     * @param mid the id of the gstinDetails to retrieve.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the gstinDetails, or with status {@code 404 (Not Found)}.
      */
-    @GetMapping("/gstin-details/{id}")
-    public ResponseEntity<GstinDetails> getGstinDetails(@PathVariable Long id) {
-        log.debug("REST request to get GstinDetails : {}", id);
-        Optional<GstinDetails> gstinDetails = gstinDetailsRepository.findById(id);
-        return ResponseUtil.wrapOrNotFound(gstinDetails);
+    @GetMapping("/gstin-details/{mid}")
+    public ResponseEntity<GstinDetails> getGstinDetails(@PathVariable String mid) {
+        log.debug("REST request to get GstinDetails : {}", mid);
+        GstinDetails gstinDetails = gstinDetailsRepository.findByMid(mid);
+        return ObjectUtils.isEmpty(gstinDetails)?ResponseEntity.notFound().build():ResponseEntity.ok(gstinDetails);
     }
 
     /**

@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 @SuppressWarnings("unused")
 @Repository
 public interface GstinDetailsRepository extends JpaRepository<GstinDetails, Long> {
+   GstinDetails  findByMid(String mid);
 }

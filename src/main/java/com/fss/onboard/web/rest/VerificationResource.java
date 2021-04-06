@@ -52,22 +52,26 @@ public class VerificationResource {
     public ResponseEntity<Verification> createVerification(@RequestBody Verification verification) throws URISyntaxException {
         log.debug("REST request to save Verification : {}", verification);
         if (verification.getMid() != null) {
-            throw new BadRequestAlertException("A new verification cannot already have an ID", ENTITY_NAME, "idexists");
+            throw new BadRequestAlertException("A new verification must have MID", ENTITY_NAME, "idexists");
         }
+        Verification result;
         Verification byMid = verificationRepository.findByMid(verification.getMid());
         if(!ObjectUtils.isEmpty(byMid))
         {
-            if (StringUtils.isEmpty(byMid.getBankStatus())&&!StringUtils.isEmpty(verification.getBankStatus())) {
+            if ((StringUtils.isEmpty(byMid.getBankStatus())||byMid.getBankStatus()==null)&&!StringUtils.isEmpty(verification.getBankStatus())) {
                 byMid.setBankStatus(verification.getBankStatus());
             }
-            if (StringUtils.isEmpty(byMid.getPanStatus())&&!StringUtils.isEmpty(verification.getPanStatus())) {
+            if ((StringUtils.isEmpty(byMid.getPanStatus())||byMid.getPanStatus()== null)&&!StringUtils.isEmpty(verification.getPanStatus())) {
                 byMid.setBankStatus(verification.getPanStatus());
             }
-            if(StringUtils.isEmpty(byMid.getGstinStatus())&&!StringUtils.isEmpty(verification.getGstinStatus())) {
+            if((StringUtils.isEmpty(byMid.getGstinStatus())||byMid.getGstinStatus()==null)&&!StringUtils.isEmpty(verification.getGstinStatus())) {
                 byMid.setBankStatus(verification.getGstinStatus());
             }
+            result   = verificationRepository.save(byMid);
         }
-        Verification result = verificationRepository.save(verification);
+        else {
+            result = verificationRepository.save(verification);
+        }
         return ResponseEntity.created(new URI("/api/verifications/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
             .body(result);
@@ -108,13 +112,13 @@ public class VerificationResource {
     /**
      * {@code GET  /verifications/:id} : get the "id" verification.
      *
-     * @param id the id of the verification to retrieve.
+     * @param mid the id of the verification to retrieve.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the verification, or with status {@code 404 (Not Found)}.
      */
-    @GetMapping("/verifications/{id}")
-    public Verification getVerification(@PathVariable String id) {
-        log.debug("REST request to get Verification : {}", id);
-        Verification verification = verificationRepository.findByMid(id);
+    @GetMapping("/verifications/{mid}")
+    public Verification getVerification(@PathVariable String mid) {
+        log.debug("REST request to get Verification : {}", mid);
+        Verification verification = verificationRepository.findByMid(mid);
         return verification;
     }
 

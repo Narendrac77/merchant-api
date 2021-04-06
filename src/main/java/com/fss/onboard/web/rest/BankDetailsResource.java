@@ -61,8 +61,8 @@ public class BankDetailsResource {
     @PostMapping("/bank-details")
     public ResponseEntity<BankDetails> createBankDetails(@RequestBody BankDetails bankDetails) throws URISyntaxException {
         log.debug("REST request to save BankDetails : {}", bankDetails);
-        if (StringUtils.isEmpty(bankDetails.getAccountNumber())) {
-            throw new BadRequestAlertException("A new bankDetails cannot already have an ID", ENTITY_NAME, "idexists");
+        if (StringUtils.isEmpty(bankDetails.getAccountNumber()) && StringUtils.isEmpty(bankDetails.getMid())) {
+            throw new BadRequestAlertException("A new bankDetails must have mandatory details", ENTITY_NAME, "idexists");
         }
         Bankverification byBankverificationId = bankverificationRepository.findByBankverificationId(Integer.valueOf(bankDetails.getAccountNumber()));
         if(ObjectUtils.isEmpty(byBankverificationId)) {
@@ -137,14 +137,14 @@ public class BankDetailsResource {
     /**
      * {@code GET  /bank-details/:id} : get the "id" bankDetails.
      *
-     * @param id the id of the bankDetails to retrieve.
+     * @param mid the id of the bankDetails to retrieve.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the bankDetails, or with status {@code 404 (Not Found)}.
      */
-    @GetMapping("/bank-details/{id}")
-    public ResponseEntity<BankDetails> getBankDetails(@PathVariable Long id) {
-        log.debug("REST request to get BankDetails : {}", id);
-        Optional<BankDetails> bankDetails = bankDetailsRepository.findById(id);
-        return ResponseUtil.wrapOrNotFound(bankDetails);
+    @GetMapping("/bank-details/{mid}")
+    public ResponseEntity<BankDetails> getBankDetails(@PathVariable String mid) {
+        log.debug("REST request to get BankDetails : {}", mid);
+        BankDetails bankDetails = bankDetailsRepository.findByMid(mid);
+        return ObjectUtils.isEmpty(bankDetails)?ResponseEntity.notFound().build():ResponseEntity.ok(bankDetails);
     }
 
     /**

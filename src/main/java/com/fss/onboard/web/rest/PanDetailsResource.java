@@ -136,14 +136,15 @@ public class PanDetailsResource {
     /**
      * {@code GET  /pan-details/:id} : get the "id" panDetails.
      *
-     * @param id the id of the panDetails to retrieve.
+     * @param mid the id of the panDetails to retrieve.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the panDetails, or with status {@code 404 (Not Found)}.
      */
-    @GetMapping("/pan-details/{id}")
-    public ResponseEntity<PanDetails> getPanDetails(@PathVariable Long id) {
-        log.debug("REST request to get PanDetails : {}", id);
-        Optional<PanDetails> panDetails = panDetailsRepository.findById(id);
-        return ResponseUtil.wrapOrNotFound(panDetails);
+    @GetMapping("/pan-details/{mid}")
+    public ResponseEntity<PanDetails> getPanDetails(@PathVariable String mid) {
+        log.debug("REST request to get PanDetails : {}", mid);
+        PanDetails panDetails = panDetailsRepository.findByMid(mid);
+        return ObjectUtils.isEmpty(panDetails)?ResponseEntity.notFound().build():ResponseEntity.ok(panDetails);
+
     }
 
     /**

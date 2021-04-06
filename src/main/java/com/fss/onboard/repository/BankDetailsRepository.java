@@ -11,4 +11,6 @@ import org.springframework.stereotype.Repository;
 @SuppressWarnings("unused")
 @Repository
 public interface BankDetailsRepository extends JpaRepository<BankDetails, Long> {
+
+    BankDetails findByMid(String id);
 }
