@@ -327,7 +327,7 @@ INSERT INTO sub_categories VALUES
 
 
 
-INSERT INTO bankverification VALUES
+INSERT INTO bankverification(bankverification_id) VALUES
 (1234567899),
 (1234567898),
 (1234567897),
@@ -335,7 +335,7 @@ INSERT INTO bankverification VALUES
 (1234567895);
 
 
-INSERT INTO panverification VALUES
+INSERT INTO panverification(panverification_id) VALUES
 (1234567899),
 (1234567898),
 (1234567897),
@@ -343,7 +343,7 @@ INSERT INTO panverification VALUES
 (1234567895);
 
 
-INSERT INTO gstinverification VALUES
+INSERT INTO gstinverification(gstinverification_id) VALUES
 (1234567899),
 (1234567898),
 (1234567897),

@@ -11,6 +11,7 @@ import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,6 +41,9 @@ public class PanDetailsResource {
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;
+
+    @Autowired
+    VerificationResource verificationResource;
 
     private final PanDetailsRepository panDetailsRepository;
 
@@ -71,10 +75,12 @@ public class PanDetailsResource {
         }
         Verification verification = new Verification();
         verification.setMid(panDetails.getMid());
-        verification.setBankStatus(panDetails.getStatus());
-        String uri = "http://localhost:8080/api/verifications";
+        verification.setPanStatus(panDetails.getStatus());
+       /* String uri = "http://localhost:8080/api/verifications";
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Verification> verificationResponseEntity = restTemplate.postForEntity(uri, verification, Verification.class);
+       */
+        verificationResource.createVerification(verification);
         PanDetails result = panDetailsRepository.save(panDetails);
         return ResponseEntity.created(new URI("/api/pan-details/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
@@ -104,10 +110,12 @@ public class PanDetailsResource {
         }
         Verification verification = new Verification();
         verification.setMid(panDetails.getMid());
-        verification.setBankStatus(panDetails.getStatus());
-        String uri = "http://localhost:8080/api/verifications";
+        verification.setPanStatus(panDetails.getStatus());
+      /*  String uri = "http://localhost:8080/api/verifications";
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Verification> verificationResponseEntity = restTemplate.postForEntity(uri, verification, Verification.class);
+       */
+        verificationResource.createVerification(verification);
         PanDetails result = panDetailsRepository.save(panDetails);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, panDetails.getId().toString()))

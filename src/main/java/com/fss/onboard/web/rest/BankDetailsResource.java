@@ -8,11 +8,11 @@ import com.fss.onboard.repository.BankverificationRepository;
 import com.fss.onboard.web.rest.errors.BadRequestAlertException;
 
 import io.github.jhipster.web.util.HeaderUtil;
-import io.github.jhipster.web.util.ResponseUtil;
-import liquibase.pro.packaged.V;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
@@ -23,7 +23,6 @@ import org.springframework.web.client.RestTemplate;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -41,6 +40,9 @@ public class BankDetailsResource {
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;
+
+    @Autowired
+    VerificationResource verificationResource;
 
     private final BankDetailsRepository bankDetailsRepository;
 
@@ -64,18 +66,23 @@ public class BankDetailsResource {
         if (StringUtils.isEmpty(bankDetails.getAccountNumber()) && StringUtils.isEmpty(bankDetails.getMid())) {
             throw new BadRequestAlertException("A new bankDetails must have mandatory details", ENTITY_NAME, "idexists");
         }
+        bankverificationRepository.findById(Long.valueOf(1));
         Bankverification byBankverificationId = bankverificationRepository.findByBankverificationId(Integer.valueOf(bankDetails.getAccountNumber()));
         if(ObjectUtils.isEmpty(byBankverificationId)) {
             bankDetails.setStatus("Declined");
         }else{
             bankDetails.setStatus("Approved");
         }
+
         Verification verification = new Verification();
         verification.setMid(bankDetails.getMid());
         verification.setBankStatus(bankDetails.getStatus());
-        String uri = "http://localhost:8080/api/verifications";
-        RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<Verification> verificationResponseEntity = restTemplate.postForEntity(uri, verification, Verification.class);
+      //  HttpHeaders headers = new HttpHeaders();
+      //  headers.set("a");
+      //  String uri = "http://localhost:8080/api/verifications";
+    //    RestTemplate restTemplate = new RestTemplate();
+       // ResponseEntity<Verification> verificationResponseEntity = restTemplate.postForEntity(uri, verification, Verification.class);
+        verificationResource.createVerification(verification);
         BankDetails result = bankDetailsRepository.save(bankDetails);
         return ResponseEntity.created(new URI("/api/bank-details/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
@@ -106,9 +113,11 @@ public class BankDetailsResource {
         Verification verification = new Verification();
         verification.setMid(bankDetails.getMid());
         verification.setBankStatus(bankDetails.getStatus());
-        String uri = "http://localhost:8080/api/verifications";
+      /*  String uri = "http://localhost:8080/api/verifications";
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Verification> verificationResponseEntity = restTemplate.postForEntity(uri, verification, Verification.class);
+      */
+        verificationResource.createVerification(verification);
         BankDetails result = bankDetailsRepository.save(bankDetails);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, bankDetails.getId().toString()))

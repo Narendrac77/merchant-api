@@ -16,19 +16,22 @@ DROP TABLE IF EXISTS sub_categories;
 DROP TABLE IF EXISTS panverification;
 
 CREATE TABLE panverification(
-  panverificationId INTEGER PRIMARY KEY
+Id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  panverification_id INTEGER
 );
 
 DROP TABLE IF EXISTS bankverification;
 
 CREATE TABLE bankverification(
-bankverificationId INTEGER PRIMARY KEY
+Id INTEGER AUTO_INCREMENT PRIMARY KEY,
+bankverification_id INTEGER
 );
 
 DROP TABLE IF EXISTS gstinverification;
 
 CREATE TABLE gstinverification(
-gstinverificationId INTEGER PRIMARY KEY
+Id INTEGER AUTO_INCREMENT PRIMARY KEY,
+gstinverification_id INTEGER
 );
 
 

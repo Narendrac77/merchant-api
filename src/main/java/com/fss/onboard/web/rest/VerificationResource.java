@@ -51,21 +51,21 @@ public class VerificationResource {
     @PostMapping("/verifications")
     public ResponseEntity<Verification> createVerification(@RequestBody Verification verification) throws URISyntaxException {
         log.debug("REST request to save Verification : {}", verification);
-        if (verification.getMid() != null) {
+        if (verification.getMid() == null) {
             throw new BadRequestAlertException("A new verification must have MID", ENTITY_NAME, "idexists");
         }
         Verification result;
         Verification byMid = verificationRepository.findByMid(verification.getMid());
         if(!ObjectUtils.isEmpty(byMid))
         {
-            if ((StringUtils.isEmpty(byMid.getBankStatus())||byMid.getBankStatus()==null)&&!StringUtils.isEmpty(verification.getBankStatus())) {
+            if (("Declined".equalsIgnoreCase(byMid.getBankStatus())||StringUtils.isEmpty(byMid.getBankStatus()))&&!StringUtils.isEmpty(verification.getBankStatus())) {
                 byMid.setBankStatus(verification.getBankStatus());
             }
-            if ((StringUtils.isEmpty(byMid.getPanStatus())||byMid.getPanStatus()== null)&&!StringUtils.isEmpty(verification.getPanStatus())) {
-                byMid.setBankStatus(verification.getPanStatus());
+            if (("Declined".equalsIgnoreCase(byMid.getPanStatus())||StringUtils.isEmpty(byMid.getPanStatus()))&&!StringUtils.isEmpty(verification.getPanStatus())) {
+                byMid.setPanStatus(verification.getPanStatus());
             }
-            if((StringUtils.isEmpty(byMid.getGstinStatus())||byMid.getGstinStatus()==null)&&!StringUtils.isEmpty(verification.getGstinStatus())) {
-                byMid.setBankStatus(verification.getGstinStatus());
+            if(("Declined".equalsIgnoreCase(byMid.getGstinStatus())||StringUtils.isEmpty(byMid.getGstinStatus()))&&!StringUtils.isEmpty(verification.getGstinStatus())) {
+                byMid.setGstinStatus(verification.getGstinStatus());
             }
             result   = verificationRepository.save(byMid);
         }

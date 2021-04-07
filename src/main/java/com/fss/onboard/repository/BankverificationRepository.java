@@ -12,5 +12,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BankverificationRepository extends JpaRepository<Bankverification, Long> {
 
+   // @Query(value = "SELECT * from BANKVERIFICATION WHERE bankverification_id = ?1",nativeQuery = true)
     Bankverification findByBankverificationId(Integer id);
 }

@@ -9,6 +9,7 @@ import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,6 +39,9 @@ public class GstinDetailsResource {
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;
+
+    @Autowired
+    VerificationResource verificationResource;
 
     private final GstinDetailsRepository gstinDetailsRepository;
 
@@ -69,11 +73,13 @@ public class GstinDetailsResource {
         }
         Verification verification = new Verification();
         verification.setMid(gstinDetails.getMid());
-        verification.setBankStatus(gstinDetails.getStatus());
-        String uri = "http://localhost:8080/api/verifications";
+        verification.setGstinStatus(gstinDetails.getStatus());
+       /* String uri = "http://localhost:8080/api/verifications";
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Verification> verificationResponseEntity = restTemplate.postForEntity(uri, verification, Verification.class);
-         GstinDetails result =  gstinDetailsRepository.save(gstinDetails);
+       */
+        verificationResource.createVerification(verification);
+        GstinDetails result =  gstinDetailsRepository.save(gstinDetails);
         return ResponseEntity.created(new URI("/api/gstin-details/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
             .body(result);
@@ -101,10 +107,12 @@ public class GstinDetailsResource {
         }
         Verification verification = new Verification();
         verification.setMid(gstinDetails.getMid());
-        verification.setBankStatus(gstinDetails.getStatus());
-        String uri = "http://localhost:8080/api/verifications";
+        verification.setGstinStatus(gstinDetails.getStatus());
+       /* String uri = "http://localhost:8080/api/verifications";
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Verification> verificationResponseEntity = restTemplate.postForEntity(uri, verification, Verification.class);
+        */
+        verificationResource.createVerification(verification);
         GstinDetails result =  gstinDetailsRepository.save(gstinDetails);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, gstinDetails.getId().toString()))
