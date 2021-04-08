@@ -1,6 +1,7 @@
 package com.fss.onboard.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.checkerframework.common.aliasing.qual.Unique;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -29,6 +30,7 @@ public class GstinDetails implements Serializable {
     @Column(name = "consent")
     private String consent;
 
+    @Unique
     @Column(name = "mid")
     private String mid;
 

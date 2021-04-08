@@ -32,7 +32,7 @@ public class PanDetails implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "mid")
+    @Column(name = "mid",unique = true)
     private String mid;
 
     @Column(name = "status")
